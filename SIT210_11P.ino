@@ -86,7 +86,7 @@ void morse_message(char message[]) {
     if (c == ' ') {           // If it's a space
       delay(INTER_WORD_TIME); // Pause for that long without blinking
       Serial.println();       // Insert a line between words in our serial port too
-      continue;
+      continue;               // And go to the next character instead of trying to encode as morse code.
     }
     char* letter_code = morse_encode(c);
     blink_morse(letter_code);
