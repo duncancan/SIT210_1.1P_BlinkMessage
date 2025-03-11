@@ -88,7 +88,7 @@ void morse_message(char message[]) {
       Serial.println();       // Insert a line between words in our serial port too
       continue;
     }
-	  char* letter_code = morse_encode(c);
+    char* letter_code = morse_encode(c);
     blink_morse(letter_code);
   }
 
